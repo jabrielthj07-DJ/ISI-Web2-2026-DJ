@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD Label's - DJ</title>
+
+    <link rel="stylesheet" href="/ISI-Web2-2026-DJ/pages/admin/darell.j/Style.CSS">
+</head>
+
+<body>
+
+<h1>Labels</h1>
+
+<input id="name" placeholder="Nombre">
+<input id="color" placeholder="Color (#ff0000)">
+
+<button id="btnSave" onclick="createLabel()">Guardar</button>
+
+<br><br>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Color</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+
+    <tbody id="tableLabels"></tbody>
+</table>
+
+<script type="module" src="/ISI-Web2-2026-DJ/pages/admin/darell.j/label.JS"></script>
+
+</body>
+</html>
