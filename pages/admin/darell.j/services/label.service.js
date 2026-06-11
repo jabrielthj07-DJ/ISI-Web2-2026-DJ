@@ -1,5 +1,5 @@
 import LabelRequest from "../models/Request/label.request.js";
-import { LabelResponse } from "../models//Response//label.response.js";
+import { LabelResponse } from "../models//Response/label.response.js";
 import HttpService from "../../../../shared/services/http.service.js";
 
 export default class LabelsService extends HttpService {
