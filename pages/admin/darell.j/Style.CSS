@@ -87,3 +87,12 @@ button:hover {
     transition: 3s ease;
     color: white;
 }
+
+/*Icono a la par del Name/Label - (Color label) */
+.color-icon{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #000;
+}

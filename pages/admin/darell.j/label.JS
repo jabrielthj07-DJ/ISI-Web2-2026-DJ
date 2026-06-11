@@ -3,11 +3,11 @@ import LabelRequest from "../darell.j/models/Request/label.request.js";
 
 const service = new LabelsService();
 
-//  ID  del grupo
-const teamId = 1001; // My ID
-// Id de Ushida, cualquier mate esta en un txt API Prof
+//  ID  del grupo agregado en el swagger
+const teamId = 1001; 
 
-// Get
+
+
 async function loadLabels() {
 
 const labels = await service.get(teamId);
@@ -17,22 +17,23 @@ const table = document.getElementById("tableLabels");
 
     labels.forEach(label => {
         table.innerHTML += `
-     <tr>
-         <td>${label.id}</td>
-       <td>${label.name}</td>
-         <td style="color:${label.color}">
-          ${label.color}
-        </td>
-         <td>
-              <button onclick="editLabel(${label.id}, '${label.name}', '${label.color}')">
-                        Editar
-             </button>
+        <tr>
+            <td>${label.id}</td>
+            <td>${label.name}</td>
+            <td>
+                <span class="color-icon" style="background-color:${label.color}"></span>
+            </td>
 
-            <button onclick="deleteLabel(${label.id})">
-                        Eliminar
-             </button>
+        <td>
+        <button onclick="editLabel(${label.id}, '${label.name}', '${label.color}')">
+                Editar
+        </button>
+
+        <button onclick="deleteLabel(${label.id})">
+                Eliminar
+        </button>
         </td>
-     </tr>
+        </tr>
         `;
     });
 }
